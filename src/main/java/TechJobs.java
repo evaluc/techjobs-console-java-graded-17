@@ -138,6 +138,7 @@ public class TechJobs {
             }
         }
 
+        //attempt to push 3
         /*
         else {
             for (int i = 0; i < someJobs.size(); i++) {
