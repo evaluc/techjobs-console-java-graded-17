@@ -98,7 +98,7 @@ public class JobData {
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
         for (HashMap<String, String> row : allJobs) {
-            //String aValue =  //figure out what this is;
+            //If job in new ArrayList, ignore and continue to iterate on inner loop
             if (jobs.contains(row)) {
                 continue;
             }
@@ -106,7 +106,6 @@ public class JobData {
             for (String rowValue : row.values()) {
                 if (rowValue.contains(value)) {
                     jobs.add(row);
-                    //do I need to add break; here?
                 }
             }
         }

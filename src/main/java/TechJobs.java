@@ -62,7 +62,6 @@ public class TechJobs {
                 String searchTerm = in.nextLine();
 
                 if (searchField.equals("all")) {
-                    //System.out.println("Search all fields not implemented yet.");
                     printJobs(JobData.findByValue(searchTerm));
                 } else {
                     printJobs(JobData.findByColumnAndValue(searchField, searchTerm));
@@ -126,33 +125,19 @@ public class TechJobs {
         }
         else {
             for (HashMap<String, String> map : someJobs) {
+                //Prints prefix asterisks outside inner loop
                 System.out.println("\n*****");
+
                 for (Map.Entry<String, String> jobListing : map.entrySet()) {
                     String key = jobListing.getKey();
                     String value = jobListing.getValue();
 
                     System.out.println(key + ": " + value);
 
-                    //System.out.println("*****\n" + key + ": " + value + "\n*****");
                 }
+                //Prints suffix asterisks outside inner loop
                 System.out.println("*****");
             }
         }
-
-        //attempt to push 3
-        /*
-        else {
-            for (int i = 0; i < someJobs.size(); i++) {
-                System.out.println(String.format("*****"
-                        + "\nposition type: %s."
-                        + "\nname: %s."
-                        + "\nemployer: %s."
-                        + "\nlocation: %s."
-                        + "\ncore competency: %s."
-                        + "\n*****", someJobs, nameString, employerString, locationString, coreCompentencyString));
-            }
-        }
-        */
-        //System.out.println("printJobs is not implemented yet");
     }
 }
