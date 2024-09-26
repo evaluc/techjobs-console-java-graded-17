@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by LaunchCode
@@ -43,6 +40,8 @@ public class TechJobs {
                 } else {
 
                     ArrayList<String> results = JobData.findAll(columnChoice);
+                    //Alphabetically sorts results ignoring case Bonus Mission 1
+                    Collections.sort(results, String.CASE_INSENSITIVE_ORDER);
 
                     System.out.println("\n*** All " + columnChoices.get(columnChoice) + " Values ***");
 
